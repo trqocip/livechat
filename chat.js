@@ -23,7 +23,8 @@ function initChat() {
     user = document.getElementById('user').value.trim();
     if (!user) return;
 
-    ws = new WebSocket("ws://localhost:8090");
+   // ws = new WebSocket("ws://localhost:8090");
+const ws = new WebSocket('wss://livechat-xv67.onrender.com');
 
     ws.onopen = () => {
         ws.send(JSON.stringify({
